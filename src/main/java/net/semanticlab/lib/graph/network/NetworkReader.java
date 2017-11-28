@@ -20,6 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class NetworkReader {
 
+    private NetworkReader() {}
+
     public static Network readNetwork(File f) {
         List<Integer> sourceNodes = new ArrayList<>();
         List<Integer> dstNodes = new ArrayList<>();

@@ -12,6 +12,9 @@ import java.util.stream.IntStream;
  *
  */
 public class ArraysHelper {
+
+    private ArraysHelper() {}
+
     public static double calcSum(double[] value) {
         return DoubleStream.of(value).sum();
     }
@@ -56,13 +59,14 @@ public class ArraysHelper {
     }
 
     public static int[] generateRandomPermutation(int nElements, Random random) {
-        int i, j, k;
+        int j;
+        int k;
         int[] permutation;
 
         permutation = new int[nElements];
-        for (i = 0; i < nElements; i++)
+        for (int i = 0; i < nElements; i++)
             permutation[i] = i;
-        for (i = 0; i < nElements; i++) {
+        for (int i = 0; i < nElements; i++) {
             j = random.nextInt(nElements);
             k = permutation[i];
             permutation[i] = permutation[j];

@@ -3,7 +3,6 @@ package net.semanticlab.lib.graph.pagerank;
 
 import static java.lang.Math.abs;
 import java.util.Arrays;
-
 import lombok.extern.slf4j.Slf4j;
 import net.semanticlab.lib.graph.network.Network;
 
@@ -41,7 +40,8 @@ public class PageRank {
             updatedPageRank = new double[n.getNumNodes()];
 
             // compute the updated PageRank values
-            int src, dst;
+            int src;
+            int dst;
             for (int i = 0; i < edges[0].length; i++) {
                 src = edges[0][i];
                 dst = edges[1][i];
